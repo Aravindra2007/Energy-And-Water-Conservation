@@ -89,6 +89,7 @@ if page == "Dashboard":
     styled_df = df_display.style.apply(highlight_cutoff, axis=1)
     st.dataframe(styled_df, height=400)
 
+if page == Alerts:
     # Alerts section
     st.subheader("⚠️ Alerts")
     if not df_energy_alerts.empty:
@@ -113,3 +114,4 @@ if page == "Dashboard":
     st.subheader("💧 Water Recommendations (Top 10)")
     for tip in water_tips:
         st.write(f"• {tip}")
+
