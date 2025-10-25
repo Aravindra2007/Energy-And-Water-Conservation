@@ -35,6 +35,32 @@ st.markdown(
 if st.button(" Color Indictaes Reaches Over Limit "):
     st.success("Data analysis triggered successfully!")
 
+
+st.markdown(
+    """
+    <style>
+    div.stButton > button:first-child {
+        background-color: #99ccff; /* Hot pink */
+        color: white;
+        font-size: 18px;
+        border-radius: 10px;
+        height: 50px;
+        width: 250px;
+        transition: 0.3s;
+    }
+    div.stButton > button:first-child:hover {
+        background-color: #ff85c1; /* lighter pink on hover */
+        color: white;
+        transform: scale(1.03);
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+if st.button(" Color Indictaes That Safe Zone  "):
+    st.success("Data analysis triggered successfully!")
+
 # --- Load data safely ---
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_PATH = os.path.join(BASE_DIR, "data", "appliance_usage.csv")
@@ -139,6 +165,7 @@ if page == "Dashboard":
     st.subheader("💧 Water Recommendations (Top 10)")
     for tip in water_tips:
         st.write(f"• {tip}")
+
 
 
 
