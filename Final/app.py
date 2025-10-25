@@ -44,10 +44,10 @@ st.markdown("""
 col1, col2 = st.columns(2)
 
 with col1:
-    pink_btn = st.button("Light Pink Button")
+    pink_btn = st.button("Light Pink Indicates that It reaches Maximum Limit ")
 
 with col2:
-    black_btn = st.button("Black Button")
+    black_btn = st.button("Black Color Indicates that It is in Safe Zone ")
 
 # --- Example action ---
 if pink_btn:
@@ -164,6 +164,7 @@ if page == "Dashboard":
     st.subheader("💧 Water Recommendations (Top 10)")
     for tip in water_tips:
         st.write(f"• {tip}")
+
 
 
 
