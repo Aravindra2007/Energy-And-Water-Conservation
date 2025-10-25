@@ -2,9 +2,9 @@
 from twilio.rest import Client
 
 # Twilio credentials
-ACCOUNT_SID = "AC855c77cab687272ab71ca1d72d0a36d3"
-AUTH_TOKEN = "18a40942933cfe1b63fce2c49eadcf97"
-FROM_NUMBER = "+19789589288"   # Your Twilio phone number
+ACCOUNT_SID = "AC6c7690f9d0b31b8d1873288a5968f28a"
+AUTH_TOKEN = "a164ce82616975261fecdaf2014f977c"
+FROM_NUMBER = "+19788833751"   # Your Twilio phone number
 TO_NUMBER = "+918919146448"   # Your verified mobile number
 
 client = Client(ACCOUNT_SID, AUTH_TOKEN)
@@ -19,3 +19,4 @@ def send_sms_alert(message):
         print("SMS sent:", message)
     except Exception as e:
         print("Twilio SMS failed:", e)
+
