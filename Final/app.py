@@ -23,7 +23,7 @@ st.markdown(
         transition: 0.3s;
     }
     div.stButton > button:first-child:hover {
-        background-color: #ff85c1; /* lighter pink on hover */
+        background-color: #ff9999; /* lighter pink on hover */
         color: white;
         transform: scale(1.03);
     }
@@ -49,7 +49,7 @@ st.markdown(
         transition: 0.3s;
     }
     div.stButton > button:first-child:hover {
-        background-color: #ff85c1; /* lighter pink on hover */
+        background-color: #99ccff; /* lighter pink on hover */
         color: white;
         transform: scale(1.03);
     }
@@ -165,6 +165,7 @@ if page == "Dashboard":
     st.subheader("💧 Water Recommendations (Top 10)")
     for tip in water_tips:
         st.write(f"• {tip}")
+
 
 
 
