@@ -14,7 +14,7 @@ st.markdown(
     """
     <style>
     div.stButton > button:first-child {
-        background-color: #ff69b4; /* Hot pink */
+        background-color: #ff9999; /* Hot pink */
         color: white;
         font-size: 18px;
         border-radius: 10px;
@@ -32,7 +32,7 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-if st.button("🌸 Analyze Latest Data"):
+if st.button(" Color Indictaes Reaches Over Limit "):
     st.success("Data analysis triggered successfully!")
 
 # --- Load data safely ---
@@ -139,6 +139,7 @@ if page == "Dashboard":
     st.subheader("💧 Water Recommendations (Top 10)")
     for tip in water_tips:
         st.write(f"• {tip}")
+
 
 
 
