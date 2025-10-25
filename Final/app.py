@@ -9,16 +9,6 @@ from src.recommendations import ENERGY_LIMIT, WATER_LIMIT
 # --- Streamlit setup ---
 st.set_page_config(page_title="🌿 EcoSenseAI Dashboard", layout="wide")
 st.title("🌿 EcoSenseAI: Energy & Water Conservation")
-st.subtitle(" Light Pink Color Indicates that It reaches Over limit ")
-st.subtitle(" Black Color Indicates that It is in Safe Zone ")
-########
-
-
-
-
-
-
-
 
 # --- Load data safely ---
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -124,6 +114,7 @@ if page == "Dashboard":
     st.subheader("💧 Water Recommendations (Top 10)")
     for tip in water_tips:
         st.write(f"• {tip}")
+
 
 
 
