@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-#import plotly.express as px
+import plotly.express as px
 from src.analyze_usage import analyze_usage
 from src.recommendations import get_energy_recommendations, get_water_recommendations
 from src.recommendations import ENERGY_LIMIT, WATER_LIMIT
@@ -94,4 +94,5 @@ if page == "Dashboard":
     st.subheader("💧 Water Recommendations (Top 10)")
     for tip in water_tips:
         st.write(tip)
+
 
