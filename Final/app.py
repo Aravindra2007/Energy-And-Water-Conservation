@@ -10,6 +10,54 @@ from src.recommendations import ENERGY_LIMIT, WATER_LIMIT
 st.set_page_config(page_title="🌿 EcoSenseAI Dashboard", layout="wide")
 st.title("🌿 EcoSenseAI: Energy & Water Conservation")
 
+########
+st.markdown("""
+    <style>
+    div.stButton > button:first-child {
+        background-color: #ffb6c1; /* Light pink */
+        color: black;
+        border-radius: 10px;
+        height: 50px;
+        width: 150px;
+        font-weight: bold;
+    }
+
+    div.stButton > button:nth-child(2) {
+        background-color: black;
+        color: white;
+        border-radius: 10px;
+        height: 50px;
+        width: 150px;
+        font-weight: bold;
+    }
+
+    /* Optional: Add hover effects */
+    div.stButton > button:hover {
+        opacity: 0.9;
+        transform: scale(1.05);
+        transition: all 0.2s ease-in-out;
+    }
+    </style>
+""", unsafe_allow_html=True)
+
+# --- Two columns for side-by-side buttons ---
+col1, col2 = st.columns(2)
+
+with col1:
+    pink_btn = st.button("Light Pink Button")
+
+with col2:
+    black_btn = st.button("Black Button")
+
+# --- Example action ---
+if pink_btn:
+    st.success("This Color Indicates That It reaches the Over Limit ")
+elif black_btn:
+    st.info("This Color Indicates That It is in SafeZone ")
+
+
+
+
 
 
 # --- Load data safely ---
@@ -116,6 +164,7 @@ if page == "Dashboard":
     st.subheader("💧 Water Recommendations (Top 10)")
     for tip in water_tips:
         st.write(f"• {tip}")
+
 
 
 
