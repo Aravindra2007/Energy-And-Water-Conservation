@@ -2,8 +2,8 @@
 from twilio_alerts import send_sms_alert
 
 # Cut-off limits
-ENERGY_LIMIT = 1500  # Wh
-WATER_LIMIT = 50     # liters
+ENERGY_LIMIT = 3000  # Wh
+WATER_LIMIT = 150     # liters
 
 # Track which appliances have been alerted (avoid duplicate SMS)
 sent_energy_alerts = set()
@@ -42,3 +42,4 @@ def get_water_recommendations(df, max_tips=10):
         if len(tips) >= max_tips:
             break
     return tips
+
