@@ -116,21 +116,8 @@ if page == "Dashboard":
         st.write(f"• {tip}")
 
 
-if page == "Alerts":
-     st.subheader("⚠️ Alerts")
-    if not df_energy_alerts.empty:
-        st.write("### Energy Alerts")
-        for _, row in df_energy_alerts.iterrows():
-            st.warning(f"⚡ {row['appliance']} consumed {row['predicted_energy']:.0f} Wh on {row['date'].date()} (Target: {ENERGY_LIMIT} Wh)")
-    else:
-        st.success("✅ No energy alerts!")
 
-    if not df_water_alerts.empty:
-        st.write("### Water Alerts")
-        for _, row in df_water_alerts.iterrows():
-            st.warning(f"🚰 {row['appliance']} consumed {row['water_liters']:.0f} L on {row['date'].date()} (Target: {WATER_LIMIT} L)")
-    else:
-        st.success("✅ No water alerts!")
+
 
 
 
